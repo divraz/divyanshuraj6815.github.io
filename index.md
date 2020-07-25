@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 <head>
 <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
@@ -17,10 +17,8 @@
 <body>
   <input type='file' onchange="readURL(this);" />
     <img id="blah" src="#" alt="your image" />
-</body>
-</html>
-<script>
-       function readURL(input) {
+<script id="jsbin-javascript">
+     function readURL(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
 
@@ -34,4 +32,6 @@
                 reader.readAsDataURL(input.files[0]);
             }
         }
- </script>
+</script>
+</body>
+</html>
