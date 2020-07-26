@@ -66,7 +66,7 @@
         <li id="mobilenet_custom">MobileNet V2 (Winged Drones, Flying Birds, Quadcopters)</li>
         <li id="mobilenet_imagenet">MobileNet V2 (ImageNet 1000 Classes)</li>
       </tr>
-
+    <iframe src="https://medium.com/analytics-vidhya/learn-to-code-in-tensorflow2-fe735ad46826" name="myFrame"></iframe>
 <script>
   var loadFile = function(event) {
 	var image = document.getElementById('output');
