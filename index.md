@@ -1,4 +1,4 @@
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6629538307233673216" width="100%" height="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6629538307233673216" width="100%" height="100%" frameborder="0" allowfullscreen="" title="Embedded post" style="height:100%;width:100%"></iframe>
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/wRFr0LPeoyE?start=90" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <iframe width="100%" height="100%" src="https://in.pinterest.com/divyanshuraj6815/paintings/" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <iframe width="100%" height="100%" src="https%3A%2F%2Flink.medium.com%2FePVCaXAWq8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
