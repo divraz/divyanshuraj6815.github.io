@@ -8,7 +8,25 @@
 		</td>
 	</tr>
 </table>
-
+<table>
+	<tr>
+		<td>
+			<a href="https://medium.com/analytics-vidhya/learn-to-code-in-tensorflow2-fe735ad46826" target="_blank">
+				<img src="https://miro.medium.com/max/875/1*Dl6GLvDip8VaUZiTcIl0QA.jpeg" height="300"/>
+			</a>
+		</td>
+		<td>
+			<a href="https://medium.com/@divyanshuraj.6815/learn-to-code-in-tensorflow2-part2-b1c448abbf1e" target="_blank">
+				<img src="https://miro.medium.com/max/875/1*FNtUkoKczsNoRFLrY4vRbQ.png" height="300"/>
+			</a>
+		</td>
+		<td>
+			<a href="https://medium.com/analytics-vidhya/learn-to-code-in-tensorflow2-fe735ad46826" target="_blank">
+				<img src="https://miro.medium.com/max/875/1*Dl6GLvDip8VaUZiTcIl0QA.jpeg" height="300"/>
+			</a>
+		</td>
+	</tr>
+</table>
 <table>
 	<tr>
 		<td>
