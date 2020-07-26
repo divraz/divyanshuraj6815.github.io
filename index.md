@@ -14,6 +14,7 @@
 			<a href="https://medium.com/analytics-vidhya/learn-to-code-in-tensorflow2-fe735ad46826" target="_blank">
 				<img src="https://miro.medium.com/max/875/1*Dl6GLvDip8VaUZiTcIl0QA.jpeg" height="200"/>
 			</a>
+			Data Augmentation
 		</td>
 		<td>
 			<a href="https://medium.com/@divyanshuraj.6815/learn-to-code-in-tensorflow2-part2-b1c448abbf1e" target="_blank">
@@ -23,6 +24,22 @@
 		<td>
 			<a href="https://medium.com/@divyanshuraj.6815/learn-to-code-in-tensorflow2-part3-7664926b9e69" target="_blank">
 				<img src="https://miro.medium.com/max/634/1*_b_TQIZbHlwXp9XpmAJfcQ.jpeg" height="200"/>
+			</a>
+		</td>
+	</tr>
+		<td>
+			<a href="https://medium.com/@divyanshuraj.6815/not-interested-in-gardening-must-read-for-you-then-982a3bee1025" target="_blank">
+				<img src="https://miro.medium.com/max/875/1*tCQAUFjCY14gF5154t8Fow.jpeg" height="200"/>
+			</a>
+		</td>
+		<td>
+			<a href="https://medium.com/@divyanshuraj.6815/stuck-at-nan-not-a-number-while-training-your-model-4b5a6613f87e" target="_blank">
+				<img src="https://miro.medium.com/max/875/1*S-OWN1vNP9scaZYV2hXyow.png" height="200"/>
+			</a>
+		</td>
+		<td>
+			<a href="https://medium.com/analytics-vidhya/relu-activation-increase-accuracy-by-being-greedy-6b93c7c40882" target="_blank">
+				<img src="https://miro.medium.com/max/875/1*jqaW5OEqSVF6xjftzRkNnw.jpeg" height="200"/>
 			</a>
 		</td>
 	</tr>
