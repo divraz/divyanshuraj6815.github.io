@@ -1,4 +1,4 @@
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6629538307233673216" height="467" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6629538307233673216" height="500" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wRFr0LPeoyE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <table>
