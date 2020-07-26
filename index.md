@@ -15,12 +15,10 @@
   <td>
     <table>
       <tr>
+	      <li>First time might fail due to warm start, please try again</li>
         <li id="mobilenet_custom">MobileNet V2 (Winged Drones, Flying Birds, Quadcopters)</li>
         <li id="mobilenet_imagenet">MobileNet V2 (ImageNet 1000 Classes)</li>
       </tr>
-    </table>
-  </td>
-</table>
 
 <script>
   var loadFile = function(event) {
@@ -34,18 +32,18 @@
   formData.append ("data", files[0]);
   console.log (formData);
    
-	fetch("https://ie8mujag6h.execute-api.ap-south-1.amazonaws.com/dev/classify", {
+  fetch("https://ie8mujag6h.execute-api.ap-south-1.amazonaws.com/dev/classify", {
     method: "POST",
     body: formData,
   })
-	.then(response => response.json())
-	.then(json => {
-	  console.log (json);
-      if (json.error) {
-			  document.getElementById("mobilenet_custom").innerHTML = json.error;
-      } else {
-       	document.getElementById("mobilenet_custom").innerHTML = json.predicted[1];
-      }   
+  .then(response => response.json())
+  .then(json => {
+    console.log (json);
+    if (json.error) {
+      document.getElementById("mobilenet_custom").innerHTML = json.error;
+    } else {
+      document.getElementById("mobilenet_custom").innerHTML = json.predicted[1];
+    }   
    });
    
   document.getElementById("mobilenet_imagenet").innerHTML = "Fetching results....."
@@ -57,7 +55,7 @@
 	.then(json => {
 	  console.log (json);
       if (json.error) {
-			  document.getElementById("mobilenet_imagenet").innerHTML = json.error;
+        document.getElementById("mobilenet_imagenet").innerHTML = json.error;
       } else {
        	document.getElementById("mobilenet_imagenet").innerHTML = json.predicted[1];
       }   
