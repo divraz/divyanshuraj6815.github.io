@@ -20,15 +20,15 @@
 			</a>
 			Data Augmentation with TF2
 		</td>
-		<td>
+		<td style="height:200px;width:345px">
 			<a href="https://medium.com/@divyanshuraj.6815/learn-to-code-in-tensorflow2-part2-b1c448abbf1e" target="_blank">
-				<img src="https://miro.medium.com/max/875/1*FNtUkoKczsNoRFLrY4vRbQ.png" height="200"  width="345"/>
+				<img src="https://miro.medium.com/max/875/1*FNtUkoKczsNoRFLrY4vRbQ.png"/>
 			</a>
 			ResNet18 Model with TF2
 		</td>
-		<td>
+		<td style="height:230px;width:345px">
 			<a href="https://medium.com/@divyanshuraj.6815/learn-to-code-in-tensorflow2-part3-7664926b9e69" target="_blank">
-				<img src="https://miro.medium.com/max/634/1*_b_TQIZbHlwXp9XpmAJfcQ.jpeg" height="230"  width="345"/>
+				<img src="https://miro.medium.com/max/634/1*_b_TQIZbHlwXp9XpmAJfcQ.jpeg"/>
 			</a>
 			Training with TF2
 		</td>
@@ -36,21 +36,21 @@
 </table>
 <table>
 	<tr>
-		<td>
+		<td style="height:200px;width:400px">
 			<a href="https://medium.com/@divyanshuraj.6815/not-interested-in-gardening-must-read-for-you-then-982a3bee1025" target="_blank">
-				<img src="https://miro.medium.com/max/875/1*tCQAUFjCY14gF5154t8Fow.jpeg" height="200" width="400"/>
+				<img src="https://miro.medium.com/max/875/1*tCQAUFjCY14gF5154t8Fow.jpeg"/>
 			</a>
 			Gardening
 		</td>
-		<td>
+		<td style="height:200px;width:325px">
 			<a href="https://medium.com/@divyanshuraj.6815/stuck-at-nan-not-a-number-while-training-your-model-4b5a6613f87e" target="_blank">
-				<img src="https://miro.medium.com/max/875/1*S-OWN1vNP9scaZYV2hXyow.png" height="200" width="325"/>
+				<img src="https://miro.medium.com/max/875/1*S-OWN1vNP9scaZYV2hXyow.png"/>
 			</a>
 			How to get rid of NaN
 		</td>
-		<td>
+		<td style="height:200px;width:325px">
 			<a href="https://medium.com/analytics-vidhya/relu-activation-increase-accuracy-by-being-greedy-6b93c7c40882" target="_blank">
-				<img src="https://miro.medium.com/max/875/1*jqaW5OEqSVF6xjftzRkNnw.jpeg" height="200" width="325"/>
+				<img src="https://miro.medium.com/max/875/1*jqaW5OEqSVF6xjftzRkNnw.jpeg"/>
 			</a>
 			Playing with ReLU
 		</td>
