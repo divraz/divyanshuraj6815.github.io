@@ -3,7 +3,7 @@
 <table>
 	<tr>
 		<td>
-			<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6629538307233673216" height="500" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+			<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6629538307233673216?compact=1" allowfullscreen="" title="Embedded post" width="504" height="284" frameborder="0"></iframe>
 		</td>
 		<td>
 			Training a car to drive on Bangalore roads (Reinforcement Learning)
