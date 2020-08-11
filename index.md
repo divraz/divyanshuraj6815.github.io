@@ -119,35 +119,64 @@
   const formData = new FormData ();
   formData.append ("data", files[0]);
   console.log (formData);
-   
-  fetch("https://ie8mujag6h.execute-api.ap-south-1.amazonaws.com/dev/classify", {
-    method: "POST",
-    body: formData,
-  })
-  .then(response => response.json())
-  .then(json => {
-    console.log (json);
-    if (json.error) {
-      document.getElementById("mobilenet_custom").innerHTML = json.error;
-    } else {
-      document.getElementById("mobilenet_custom").innerHTML = json.predicted[1];
-    }   
-   });
-   
-  document.getElementById("mobilenet_imagenet").innerHTML = "Fetching results....."
-  fetch("https://flte7grm73.execute-api.ap-south-1.amazonaws.com/dev/classify", {
-    method: "POST",
-    body: formData,
-  })
-	.then(response => response.json())
-	.then(json => {
-	  console.log (json);
-      if (json.error) {
-        document.getElementById("mobilenet_imagenet").innerHTML = json.error;
-      } else {
-       	document.getElementById("mobilenet_imagenet").innerHTML = json.predicted[1];
-      }   
-   });
+  try {
+	  fetch("https://ie8mujag6h.execute-api.ap-south-1.amazonaws.com/dev/classify", {
+	    method: "POST",
+	    body: formData,
+	  })
+	  .then(response => response.json())
+	  .then(json => {
+	    console.log (json);
+	    if (json.error) {
+	      document.getElementById("mobilenet_custom").innerHTML = json.error;
+	    } else {
+	      document.getElementById("mobilenet_custom").innerHTML = json.predicted[1];
+	    }   
+	   });
 
+	  document.getElementById("mobilenet_imagenet").innerHTML = "Fetching results....."
+	  fetch("https://flte7grm73.execute-api.ap-south-1.amazonaws.com/dev/classify", {
+	    method: "POST",
+	    body: formData,
+	  })
+		.then(response => response.json())
+		.then(json => {
+		  console.log (json);
+	      if (json.error) {
+		document.getElementById("mobilenet_imagenet").innerHTML = json.error;
+	      } else {
+		document.getElementById("mobilenet_imagenet").innerHTML = json.predicted[1];
+	      }   
+	   });
+    } finally {
+ 	   fetch("https://ie8mujag6h.execute-api.ap-south-1.amazonaws.com/dev/classify", {
+	    method: "POST",
+	    body: formData,
+	  })
+	  .then(response => response.json())
+	  .then(json => {
+	    console.log (json);
+	    if (json.error) {
+	      document.getElementById("mobilenet_custom").innerHTML = json.error;
+	    } else {
+	      document.getElementById("mobilenet_custom").innerHTML = json.predicted[1];
+	    }   
+	   });
+
+	  document.getElementById("mobilenet_imagenet").innerHTML = "Fetching results....."
+	  fetch("https://flte7grm73.execute-api.ap-south-1.amazonaws.com/dev/classify", {
+	    method: "POST",
+	    body: formData,
+	  })
+		.then(response => response.json())
+		.then(json => {
+		  console.log (json);
+	      if (json.error) {
+		document.getElementById("mobilenet_imagenet").innerHTML = json.error;
+	      } else {
+		document.getElementById("mobilenet_imagenet").innerHTML = json.predicted[1];
+	      }   
+	   });
+	}
 };
 </script>
