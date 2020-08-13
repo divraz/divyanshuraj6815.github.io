@@ -104,9 +104,7 @@
           <input type="file" id="imageUpload1" onchange="loadFile1(event)"/>
           <img id="output1" width="400" />
         </td>
- 	<td>
-          <img id="aligned_image", src="data:image/png;base64, "/>
-	</td>
+ 	<td><img id="aligned_image" src="data:image/png;base64, "/></td>
     </tr>
 </table>
   <script>
