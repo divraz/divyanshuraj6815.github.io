@@ -101,8 +101,8 @@
 <table>
      <tr>
         <td>
-          <input type="file" id="imageUpload" onchange="loadFile(event)"/>
-          <img id="output" width="400" />
+          <input type="file" id="imageUpload1" onchange="loadFile1(event)"/>
+          <img id="output1" width="400" />
         </td>
  	<td>
     	  <p>Aligned Image</p>
@@ -111,8 +111,8 @@
 	</tr>
 	</table>
   <script>
-  var loadFile = function(event) {
-	var image = document.getElementById('output');
+  var loadFile1 = function(event) {
+	var image = document.getElementById('output1');
   const files = event.target.files
 	
   image.src = URL.createObjectURL(files[0]);
