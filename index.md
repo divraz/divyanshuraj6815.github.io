@@ -11,88 +11,6 @@
 		</td>
 	</tr>
 </table>
-## Blogs Published on Medium
-<table>
-	<tr>
-		<td style="height:200px;width:345px">
-			<a href="https://medium.com/analytics-vidhya/learn-to-code-in-tensorflow2-fe735ad46826" target="_blank">
-				<img src="https://miro.medium.com/max/875/1*Dl6GLvDip8VaUZiTcIl0QA.jpeg"/>
-			</a>
-			Data Augmentation with TF2
-		</td>
-		<td style="height:200px;width:345px">
-			<a href="https://medium.com/@divyanshuraj.6815/learn-to-code-in-tensorflow2-part2-b1c448abbf1e" target="_blank">
-				<img src="https://miro.medium.com/max/875/1*FNtUkoKczsNoRFLrY4vRbQ.png"/>
-			</a>
-			ResNet18 Model with TF2
-		</td>
-		<td style="height:230px;width:345px">
-			<a href="https://medium.com/@divyanshuraj.6815/learn-to-code-in-tensorflow2-part3-7664926b9e69" target="_blank">
-				<img src="https://miro.medium.com/max/634/1*_b_TQIZbHlwXp9XpmAJfcQ.jpeg"/>
-			</a>
-			Training with TF2
-		</td>
-	</tr>
-</table>
-<table>
-	<tr>
-		<td style="height:200px;width:400px">
-			<a href="https://medium.com/@divyanshuraj.6815/not-interested-in-gardening-must-read-for-you-then-982a3bee1025" target="_blank">
-				<img src="https://miro.medium.com/max/875/1*tCQAUFjCY14gF5154t8Fow.jpeg"/>
-			</a>
-			Gardening
-		</td>
-		<td style="height:200px;width:325px">
-			<a href="https://medium.com/@divyanshuraj.6815/stuck-at-nan-not-a-number-while-training-your-model-4b5a6613f87e" target="_blank">
-				<img src="https://miro.medium.com/max/875/1*S-OWN1vNP9scaZYV2hXyow.png"/>
-			</a>
-			How to get rid of NaN
-		</td>
-		<td style="height:200px;width:325px">
-			<a href="https://medium.com/analytics-vidhya/relu-activation-increase-accuracy-by-being-greedy-6b93c7c40882" target="_blank">
-				<img src="https://miro.medium.com/max/875/1*jqaW5OEqSVF6xjftzRkNnw.jpeg"/>
-			</a>
-			Playing with ReLU
-		</td>
-	</tr>
-</table>
-## Paintings published on Pinterest
-<table>
-	<tr>
-		<td>
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=763782418047880331" height="560" width="345" frameborder="0" scrolling="no" ></iframe>
-		</td>
-		<td>
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=763782418041109141" height="597" width="345" frameborder="0" scrolling="no" ></iframe>
-		</td>
-		<td>
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=763782418041109181" height="675" width="345" frameborder="0" scrolling="no" ></iframe>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=763782418041109125" height="520" width="345" frameborder="0" scrolling="no" ></iframe>
-		</td>
-		<td>
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=763782418041109034" height="612" width="345" frameborder="0" scrolling="no" ></iframe>
-		</td>
-		<td>
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=763782418041109044" height="560" width="345" frameborder="0" scrolling="no" ></iframe>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=763782418041109016" height="469" width="345" frameborder="0" scrolling="no" ></iframe>
-		</td>
-		<td>
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=763782418041109191" height="574" width="345" frameborder="0" scrolling="no" ></iframe>
-		</td>
-		<td>
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=763782418041108993" height="359" width="345" frameborder="0" scrolling="no" ></iframe>
-
-		</td>
-	</tr>
-</table>
 
 ## Serverless deployments DEMO
 <table>
@@ -180,3 +98,127 @@
 	}
 };
 </script>
+<table>
+     <tr>
+        <td>
+          <input type="file" id="imageUpload" onchange="loadFile(event)"/>
+          <img id="output" width="400" />
+        </td>
+ 	<td>
+    	  <p>Aligned Image</p>
+          <img id="aligned_image", 	src="data:image/png;base64, "/>
+	     </td>
+	</tr>
+	</table>
+  <script>
+  var loadFile = function(event) {
+	var image = document.getElementById('output');
+  const files = event.target.files
+	
+  image.src = URL.createObjectURL(files[0]);
+  document.getElementById("aligned_image").innerHTML = "Fetching results....."
+
+  const formData = new FormData ();
+  formData.append ("data", files[0]);
+  console.log (formData);
+	  fetch("https://95w2ata4ll.execute-api.ap-south-1.amazonaws.com/dev/classify", {
+	    method: "POST",
+	    body: formData,
+	  })
+	  .then(response => response.json())
+	  .then(json => {
+	    console.log (json);
+	    if (json.error) {
+	      document.getElementById("aligned_image").innerHTML = json.error;
+	    } else {
+          var str = json.aligned_image
+          var res = str.slice (2, -1)
+          console.log (res)
+	      document.getElementById("aligned_image").src += res;
+	    }   
+	   });
+
+};
+</script>
+## Blogs Published on Medium
+<table>
+	<tr>
+		<td style="height:200px;width:345px">
+			<a href="https://medium.com/analytics-vidhya/learn-to-code-in-tensorflow2-fe735ad46826" target="_blank">
+				<img src="https://miro.medium.com/max/875/1*Dl6GLvDip8VaUZiTcIl0QA.jpeg"/>
+			</a>
+			Data Augmentation with TF2
+		</td>
+		<td style="height:200px;width:345px">
+			<a href="https://medium.com/@divyanshuraj.6815/learn-to-code-in-tensorflow2-part2-b1c448abbf1e" target="_blank">
+				<img src="https://miro.medium.com/max/875/1*FNtUkoKczsNoRFLrY4vRbQ.png"/>
+			</a>
+			ResNet18 Model with TF2
+		</td>
+		<td style="height:230px;width:345px">
+			<a href="https://medium.com/@divyanshuraj.6815/learn-to-code-in-tensorflow2-part3-7664926b9e69" target="_blank">
+				<img src="https://miro.medium.com/max/634/1*_b_TQIZbHlwXp9XpmAJfcQ.jpeg"/>
+			</a>
+			Training with TF2
+		</td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<td style="height:200px;width:400px">
+			<a href="https://medium.com/@divyanshuraj.6815/not-interested-in-gardening-must-read-for-you-then-982a3bee1025" target="_blank">
+				<img src="https://miro.medium.com/max/875/1*tCQAUFjCY14gF5154t8Fow.jpeg"/>
+			</a>
+			Gardening
+		</td>
+		<td style="height:200px;width:325px">
+			<a href="https://medium.com/@divyanshuraj.6815/stuck-at-nan-not-a-number-while-training-your-model-4b5a6613f87e" target="_blank">
+				<img src="https://miro.medium.com/max/875/1*S-OWN1vNP9scaZYV2hXyow.png"/>
+			</a>
+			How to get rid of NaN
+		</td>
+		<td style="height:200px;width:325px">
+			<a href="https://medium.com/analytics-vidhya/relu-activation-increase-accuracy-by-being-greedy-6b93c7c40882" target="_blank">
+				<img src="https://miro.medium.com/max/875/1*jqaW5OEqSVF6xjftzRkNnw.jpeg"/>
+			</a>
+			Playing with ReLU
+		</td>
+	</tr>
+</table>
+## Paintings published on Pinterest
+<table>
+	<tr>
+		<td>
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=763782418047880331" height="560" width="345" frameborder="0" scrolling="no" ></iframe>
+		</td>
+		<td>
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=763782418041109141" height="597" width="345" frameborder="0" scrolling="no" ></iframe>
+		</td>
+		<td>
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=763782418041109181" height="675" width="345" frameborder="0" scrolling="no" ></iframe>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=763782418041109125" height="520" width="345" frameborder="0" scrolling="no" ></iframe>
+		</td>
+		<td>
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=763782418041109034" height="612" width="345" frameborder="0" scrolling="no" ></iframe>
+		</td>
+		<td>
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=763782418041109044" height="560" width="345" frameborder="0" scrolling="no" ></iframe>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=763782418041109016" height="469" width="345" frameborder="0" scrolling="no" ></iframe>
+		</td>
+		<td>
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=763782418041109191" height="574" width="345" frameborder="0" scrolling="no" ></iframe>
+		</td>
+		<td>
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=763782418041108993" height="359" width="345" frameborder="0" scrolling="no" ></iframe>
+
+		</td>
+	</tr>
+</table>
