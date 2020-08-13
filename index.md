@@ -105,10 +105,9 @@
           <img id="output1" width="400" />
         </td>
  	<td>
-    	  <p>Aligned Image</p>
           <img id="aligned_image", src="data:image/png;base64, "/>
 	</td>
-</tr>
+    </tr>
 </table>
   <script>
   var loadFile1 = function(event) {
