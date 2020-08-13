@@ -25,7 +25,7 @@
         	<li id="mobilenet_imagenet">MobileNet V2 (ImageNet 1000 Classes)</li>
 	     </td>
 	</tr>
-	</table>
+</table>
   <script>
   var loadFile = function(event) {
 	var image = document.getElementById('output');
@@ -106,10 +106,10 @@
         </td>
  	<td>
     	  <p>Aligned Image</p>
-          <img id="aligned_image", 	src="data:image/png;base64, "/>
-	     </td>
-	</tr>
-	</table>
+          <img id="aligned_image", src="data:image/png;base64, "/>
+	</td>
+</tr>
+</table>
   <script>
   var loadFile1 = function(event) {
 	var image = document.getElementById('output1');
