@@ -21,7 +21,7 @@
           <img id="output" width="300" />
         </td>
  	<td>
-  	      <li>First time might fail due to warm start, please try again</li>
+  	      <li>First time might take ~45 seconds!</li>
   	      <li id="mobilenet_custom">MobileNet V2 (Winged Drones, Flying Birds, Quadcopters)</li>
         	<li id="mobilenet_imagenet">MobileNet V2 (ImageNet 1000 Classes)</li>
 	     </td>
@@ -100,7 +100,7 @@
 	}
 };
 </script>
-### Face Alignment [<a href=https://github.com/divyanshuraj6815/eva/tree/master/serverless_face_align>Source</a>]
+### Face Alignment [<a href="https://github.com/divyanshuraj6815/eva/tree/master/serverless_face_align">Source</a>]
 <table>
      <tr>
         <td>
