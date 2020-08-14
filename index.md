@@ -145,6 +145,70 @@
 
 };
 </script>
+### Face Swap
+<table>
+     <tr>
+        <form>
+        <td>
+          <input type="file" id="imageUpload3" onchange="loadFile3(event)"/>
+          <img id="output3" width="200" />
+        </td>
+        <td>
+          <input type="file" id="imageUpload4"  onchange="loadFile4(event)"/>
+          <img id="output4" width="200" />
+        </td>
+        </form>
+	<td>
+		<li id="swaped_face">Swaped Face</li>
+		<img id="swaped_image" src="data:image/png;base64, "/>
+	</td>
+    </tr>
+</table>
+  <script>
+  var loadFile3 = function(event) {
+  var image1 = document.getElementById('output3');
+
+  const files = event.target.files;
+  console.log (files);
+  image1.content = files[0]
+  image1.src = URL.createObjectURL(files[0]);
+  }
+ 
+ var loadFile4 = function(event) {
+  var image2 = document.getElementById('output4');
+
+  const files = event.target.files;
+  console.log (files);
+  var image1 = document.getElementById('output3');
+  image2.src = URL.createObjectURL(files[0]);
+
+  document.getElementById("swaped_face").innerHTML = "Fetching results....."
+  document.getElementById("swaped_image").src = "data:image/png;base64, "
+
+  const formData = new FormData ();
+  formData.append ("data1", image1.content);
+  formData.append ("data2", files[0]);
+  console.log (formData);
+	  fetch("https://3mwpbz5gtb.execute-api.ap-south-1.amazonaws.com/dev/classify", {
+	    method: "POST",
+	    body: formData,
+	  })
+	  .then(response => response.json())
+	  .then(json => {
+	    console.log (json);
+	    if (json.error) {
+	      document.getElementById("swap_image").innerHTML = json.error;
+	    } else {
+          	var str = json.swaped_image;
+          	var res = str.slice (2, -1);
+          	console.log (res);
+		document.getElementById("swaped_face").innerHTML = "Swaped Face";
+	      document.getElementById("swaped_image").src += res;
+	    }   
+	   });
+
+};
+</script>
 ## Blogs Published on Medium
 <table>
 	<tr>
