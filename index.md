@@ -67,7 +67,7 @@
 	      }   
 	   });
     } finally {
-           setTimeout(() => {  console.log("World!"); }, 45000);
+           setTimeout(() => {  console.log("World!"); 
  	   fetch("https://ie8mujag6h.execute-api.ap-south-1.amazonaws.com/dev/classify", {
 	    method: "POST",
 	    body: formData,
@@ -95,7 +95,7 @@
 	      } else {
 		document.getElementById("mobilenet_imagenet").innerHTML = json.predicted[1];
 	      }   
-	   });
+	   });}, 45000);
 	}
 };
 </script>
