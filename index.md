@@ -100,7 +100,7 @@
 	}
 };
 </script>
-### Face Alignment ![source](https://github.com/divyanshuraj6815/eva/tree/master/serverless_face_align)
+### Face Alignment [<a href=https://github.com/divyanshuraj6815/eva/tree/master/serverless_face_align>Source</a>]
 <table>
      <tr>
         <td>
@@ -145,7 +145,7 @@
 
 };
 </script>
-### Face Swap ![Source](https://github.com/divyanshuraj6815/eva/tree/master/serverless_face_swap)
+### Face Swap [<a href="https://github.com/divyanshuraj6815/eva/tree/master/serverless_face_swap">Source</a>]
 <table>
      <tr>
         <form>
