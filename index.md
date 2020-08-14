@@ -13,6 +13,7 @@
 </table>
 
 ## Serverless deployments DEMO
+### Mobilenet Deployment
 <table>
      <tr>
         <td>
@@ -99,6 +100,7 @@
 	}
 };
 </script>
+### Face Alignment
 <table>
      <tr>
         <td>
