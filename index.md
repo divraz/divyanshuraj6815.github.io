@@ -67,6 +67,7 @@
 	      }   
 	   });
     } finally {
+           setTimeout(() => {  console.log("World!"); }, 45000);
  	   fetch("https://ie8mujag6h.execute-api.ap-south-1.amazonaws.com/dev/classify", {
 	    method: "POST",
 	    body: formData,
@@ -104,16 +105,20 @@
           <input type="file" id="imageUpload1" onchange="loadFile1(event)"/>
           <img id="output1" width="400" />
         </td>
- 	<td><img id="aligned_image" src="data:image/png;base64, "/></td>
+ 	<td>
+		<li id="aligned_face">Aligned Face</li>
+	<img id="aligned_image" src="data:image/png;base64, "/>
+	</td>
     </tr>
 </table>
   <script>
   var loadFile1 = function(event) {
-	var image = document.getElementById('output1');
+  var image = document.getElementById('output1');
   const files = event.target.files
 	
   image.src = URL.createObjectURL(files[0]);
-  document.getElementById("aligned_image").innerHTML = "Fetching results....."
+  document.getElementById("aligned_face").innerHTML = "Fetching results....."
+  document.getElementById("aligned_image").src = "data:image/png;base64, "
 
   const formData = new FormData ();
   formData.append ("data", files[0]);
@@ -128,9 +133,10 @@
 	    if (json.error) {
 	      document.getElementById("aligned_image").innerHTML = json.error;
 	    } else {
-          var str = json.aligned_image
-          var res = str.slice (2, -1)
-          console.log (res)
+          	var str = json.aligned_image;
+          	var res = str.slice (2, -1);
+          	console.log (res);
+		document.getElementById("aligned_face").innerHTML = "Aligned Face";
 	      document.getElementById("aligned_image").src += res;
 	    }   
 	   });
